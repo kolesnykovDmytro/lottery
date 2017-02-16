@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="zxx">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>SixLuck</title>
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="">
+    <meta property="og:description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="icon" type="image/png" href="favicon_16x16.png" sizes="16x16">
+	<link rel="stylesheet" href="dist/normalize.css">
+	<link rel="stylesheet" href="dist/flipclock.css">
+	<link rel="stylesheet" href="dist/jquery.countdown.css">
+	<link rel="stylesheet" href="dist/style.css">
+	<link rel="stylesheet" href="dist/miniflip.css">
+	<link rel="stylesheet" href="dist/media.css">
+
+<!-- [if lte IE 8]>
+		<script src="js/modernizr.js"></script>
+		<script src="js/html5.js"></script>
+<![endif]—> -->
+</head>
+<body>
+	<div class="wrap">
+		<div class="wrap-inner">
+			<!-- begin header -->
+			<header class="wrap-header">
+				<div class="conteiner-inner">
+					<div class="header-item">
+						<div class="header__logo">
+							<a href=""><img src="img/logo.png" alt="logo"></a>
+						</div>
+						<nav class="header__list">
+							<ul>
+								<li><a href="#">faq</a></li>
+								<li class="list__active"><a href="#">гарантия</a></li>
+							</ul>
+						</nav>
+						
+						<!-- begin hidden list -->
+						<nav class="header__list-hidden">
+							<ul>
+								<li><a href="#">faq</a></li>
+								<li class="list__active"><a href="#">гарантия</a></li>
+							</ul>
+							<span class="btn-close__menu"></span>
+						</nav>
+						<span class="hidden__btn-menu"></span>
+					</div>
+				</div>
+				<!-- end hodden list -->
+			</header>
+			<!-- end header -->
+
+			<!-- begin conteiner -->
+			<div class="wrap-conteiner">
+				<div class="conteiner-inner">
+					<div class="conteiner-flexible">
+						<section class="conteiner__title-top">
+							<h1>Полностью анонимная лоттерея без регистрации!</h1>
+							<div class="title__line"></div>
+						</section>
+
+						<!--begin conteiner-flipclock -->
+						<div class="conteiner-flipclock">
+							<div class="flipclock__title">Время до розыгрыша:</div>
+							<div class="clock"></div>
+							<div class="conteiner-item">
+								<section class="conteiner__winner">
+									<p class="winner__title">Уже выплачено победителям:<div><span class="winner__item">23</span><span class="winner__btc">btc</span></div></p>
+									<p class="winner__title">Всего выигрышных билетов: <div><span class="winner__item">1488</span></div></p>
+								</section>
+							</div>
+						</div>
+						<!-- end conteiner-flipclock -->
+
+						<!-- conteiner-ticket -->
+						<div class="conteiner-ticket">
+							<div class="ticket__title">
+								<h3>6 luck ticket</h3>
+							</div>
+							<div class="ticket__bank">
+								<span>банк лотереи:</span>
+								<p class="ticket__text">0,00023<span>btc</span></p>
+							</div>
+							<div class="ticket__buy">
+								<div class="buy__price">
+									<p class="price"><span class="price__title">цена:</span><span class="price__item">0.000</span></p>
+									<p><span class="price__total">6</span><span class="price__item">btc</span></p>
+								</div>
+								<button class="ticket__btn">купить билет</button>
+							</div>
+						</div>
+						<!-- end conteiner-ticket -->
+
+						<!-- begin conteiner title -->
+						<section class="conteiner__title-sub">
+							<p>гарантия</p><i class="title-sub__icon"></i><p>честности</p>
+							<div class="figure"></div>
+						</section>
+
+						<!--end conteiner title -->
+					</div>
+					<!-- end conteiner flexible -->
+				</div>
+			</div>
+
+			<div class="wrap-conteiner__item">
+				<!--begin conteiner-inner -->
+				<div class="conteiner-inner">
+					<!-- begin content top -->
+					<div class="content-item__top">
+						<div class="top-flipclock__mini">
+							<h6>Время до розыгрыша:</h6>
+							<div id="countdown"></div>
+						</div>
+
+						<div class="sub-current mobile">
+							<h6>Текущий фонд:</h6>
+							<p class="tickets__item"><span class="content-item__important">0.00</span>34<span class="content-item__important">btc</span></p>
+						</div>
+
+						<div class="top-buy__tickets">
+							<h6>Куплено билетов на эту игру:</h6>
+							<p class="tickets__item">208</p>
+						</div>
+						<div class="top__combination">
+							<h6>Последняя выигрышная комбинация:</h6>
+							<ul>
+								<li><a href="#">1</a></li>
+								<li><a href="#">1</a></li>
+								<li><a href="#">1</a></li>
+								<li><a href="#">1</a></li>
+								<li><a href="#">1</a></li>
+								<li><a href="#">1</a></li>
+							</ul>
+						</div>
+					</div>
+					<!-- end content top -->
+
+					<!-- begin content sub -->
+					<div class="content-item__sub">
+						<div class="sub-current">
+							<h6>Текущий фонд:</h6>
+							<p class="tickets__item"><span class="content-item__important">0.00</span>34<span class="content-item__important">btc</span></p>
+						</div>
+						<div class="sub-accumulative">
+							<h6>Накопительный фонд:</h6>
+							<p class="tickets__item"><span class="content-item__important">0.00</span>34<span class="content-item__important">btc</span></p>
+						</div>
+						<button class="content__btn">купить билет</button>
+					</div>
+
+					<!-- end content sub -->
+
+					<!-- begin table -->
+					<div class="content-table">
+						<section class="table-title__form">
+							<h2>Последние транзакции:</h2>
+							<fieldset>
+								<form action="" class="form__search">
+									<label for="search-item">Поиск по хешу транзакции или адресу кошелька:</label>
+									<input type="search" id="search-item" placeholder="Введите хешили адрес кошелька">
+								</form>
+							</fieldset>
+						</section>
+						<div class="tab-container">
+								<ul class="table-tabs">
+	                            	<li class="tab"><a href="#tabs1" class="tab__one">ставки</a></li>
+	                            	<li class="tab"><a href="#tabs2" class="tab__two">выплаты</a></li>
+	                            	<li class="tab"><a href="#tabs3" class="tab__three">выигрыши</a></li>
+	                        	</ul>
+
+						<!-- mobile table -->
+						<div class="table__mobile-group">
+							<table class="table__mobile-first" cellspacing="5" border="1" bordercolor="#d5e2ee">
+								<tbody>
+									<tr>
+										<td class="table__mobile-title">Время</td>
+										<td>21.12.17 22:22:22</td>
+									</tr>
+									<tr>
+										<td class="table__mobile-title">Сумма</td>
+										<td>0.10 btc</td>
+									</tr>
+									<tr>
+										<td class="table__mobile-title">Транзакция</td>
+										<td><a href="#">посмотреть</a></td>
+									</tr>
+								</tbody>
+							</table>
+
+							<table class="table__mobile-second" cellspacing="5" border="1" bordercolor="#d5e2ee">
+								<tbody>
+									<tr>
+										<td class="table__mobile-title">Время</td>
+										<td>21.12.17 22:22:22</td>
+									</tr>
+									<tr>
+										<td class="table__mobile-title">Сумма</td>
+										<td>0.10 btc</td>
+									</tr>
+									<tr>
+										<td class="table__mobile-title">Транзакция</td>
+										<td><a href="#">посмотреть</a></td>
+									</tr>
+								</tbody>
+							</table>
+
+							<table class="table__mobile-third" cellspacing="5" border="1" bordercolor="#d5e2ee">
+								<tbody>
+									<tr>
+										<td class="table__mobile-title">Время</td>
+										<td>21.12.17 22:22:22</td>
+									</tr>
+									<tr>
+										<td class="table__mobile-title">Сумма</td>
+										<td>0.10 btc</td>
+									</tr>
+									<tr>
+										<td class="table__mobile-title">Транзакция</td>
+										<td><a href="#">посмотреть</a></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+<!-- end mobile table -->
+
+						<div class="tab-content">
+							<div id="tabs1">
+								<table>
+								  	<tr class="table__head">
+									    <th>Время</th>
+									    <th>Сумма</th>
+									    <th>Транзакции</th>
+								  	</tr>
+								  	<tr>
+									    <td>21.12.17 22:22 </td>
+									    <td>0.10 btc</td>
+									    <td><a href="#" class="btn-modal">посмотреть</a></td>
+								  	</tr>
+								  	<tr>
+									    <td>21.12.17 22:22 </td>
+									    <td>0.10 btc</td>
+									    <td><a href="#" class="btn-modal">посмотреть</a></td>
+								  	</tr>
+								  	<tr>
+									    <td>21.12.17 22:22 </td>
+									    <td>0.10 btc</td>
+									    <td><a href="#" class="btn-modal">посмотреть</a></td>
+								  	</tr>
+								  	<tr>
+									    <td>21.12.17 22:22 </td>
+									    <td>0.10 btc</td>
+									    <td><a href="#" class="btn-modal">посмотреть</a></td>
+								  	</tr>
+								  	<tr>
+									    <td>21.12.17 22:22 </td>
+									    <td>0.10 btc</td>
+									    <td><a href="#" class="btn-modal">посмотреть</a></td>
+								  	</tr>
+								  	<tr>
+									    <td>21.12.17 22:22 </td>
+									    <td>0.10 btc</td>
+									    <td><a href="#" class="btn-modal">посмотреть</a></td>
+								  	</tr>
+								  	<tr>
+									    <td>21.12.17 22:22 </td>
+									    <td>0.10 btc</td>
+									    <td><a href="#" class="btn-modal">посмотреть</a></td>
+								  	</tr>
+								  	<tr>
+									    <td>21.12.17 22:22 </td>
+									    <td>0.10 btc</td>
+									    <td><a href="#" class="btn-modal">посмотреть</a></td>
+								  	</tr>
+								  	<tr>
+									    <td>21.12.17 22:22 </td>
+									    <td>0.10 btc</td>
+									    <td><a href="#" class="btn-modal">посмотреть</a></td>
+								  	</tr>
+								  	<tr>
+									    <td>21.12.17 22:22 </td>
+									    <td>0.10 btc</td>
+									    <td><a href="#" class="btn-modal">посмотреть</a></td>
+								  	</tr>
+								  	<tr>
+								  		<td colspan="3"><a href="" class="table__more">загрузить еще</a></td>
+								  	</tr>
+								</table>
+							</div>
+
+							<div id="tabs2">
+								<table>
+								  	<tr class="table__head-tabs2">
+									    <th>Время</th>
+									    <th>Сумма</th>
+									    <th>Транзакции</th>
+								  	</tr>
+								  	<tr>
+									    <td>21.12.17 22:22 </td>
+									    <td>0.10 btc</td>
+									    <td><a href="#">посмотреть</a></td>
+								  	</tr>
+								  	<tr>
+									    <td>21.12.17 22:22 </td>
+									    <td>0.10 btc</td>
+									    <td><a href="#">посмотреть</a></td>
+								  	</tr>
+								  	<tr>
+									    <td>21.12.17 22:22 </td>
+									    <td>0.10 btc</td>
+									    <td><a href="#">посмотреть</a></td>
+								  	</tr>
+								  	<tr>
+									    <td>21.12.17 22:22 </td>
+									    <td>0.10 btc</td>
+									    <td><a href="#">посмотреть</a></td>
+								  	</tr>
+								  	<tr>
+									    <td>21.12.17 22:22 </td>
+									    <td>0.10 btc</td>
+									    <td><a href="#">посмотреть</a></td>
+								  	</tr>
+								  	<tr>
+									    <td>21.12.17 22:22 </td>
+									    <td>0.10 btc</td>
+									    <td><a href="#">посмотреть</a></td>
+								  	</tr>
+								  	<tr>
+									    <td>21.12.17 22:22 </td>
+									    <td>0.10 btc</td>
+									    <td><a href="#">посмотреть</a></td>
+								  	</tr>
+								  	<tr>
+									    <td>21.12.17 22:22 </td>
+									    <td>0.10 btc</td>
+									    <td><a href="#">посмотреть</a></td>
+								  	</tr>
+								  	<tr>
+									    <td>21.12.17 22:22 </td>
+									    <td>0.10 btc</td>
+									    <td><a href="#">посмотреть</a></td>
+								  	</tr>
+								  	<tr>
+									    <td>21.12.17 22:22 </td>
+									    <td>0.10 btc</td>
+									    <td><a href="#">посмотреть</a></td>
+								  	</tr>
+								  	<tr>
+								  		<td colspan="3"><a href="" class="table__more">загрузить еще</a></td>
+								  	</tr>
+								</table>
+							</div>
+
+							<div id="tabs3">
+								<table>
+								  	<tr class="table__head-tabs3">
+									    <th>Время</th>
+									    <th>Сумма</th>
+									    <th>Транзакции</th>
+								  	</tr>
+								  	<tr>
+									    <td>21.12.17 22:22 </td>
+									    <td>0.10 btc</td>
+									    <td><a href="#">посмотреть</a></td>
+								  	</tr>
+								  	<tr>
+									    <td>21.12.17 22:22 </td>
+									    <td>0.10 btc</td>
+									    <td><a href="#">посмотреть</a></td>
+								  	</tr>
+								  	<tr>
+									    <td>21.12.17 22:22 </td>
+									    <td>0.10 btc</td>
+									    <td><a href="#">посмотреть</a></td>
+								  	</tr>
+								  	<tr>
+									    <td>21.12.17 22:22 </td>
+									    <td>0.10 btc</td>
+									    <td><a href="#">посмотреть</a></td>
+								  	</tr>
+								  	<tr>
+									    <td>21.12.17 22:22 </td>
+									    <td>0.10 btc</td>
+									    <td><a href="#">посмотреть</a></td>
+								  	</tr>
+								  	<tr>
+									    <td>21.12.17 22:22 </td>
+									    <td>0.10 btc</td>
+									    <td><a href="#">посмотреть</a></td>
+								  	</tr>
+								  	<tr>
+									    <td>21.12.17 22:22 </td>
+									    <td>0.10 btc</td>
+									    <td><a href="#">посмотреть</a></td>
+								  	</tr>
+								  	<tr>
+									    <td>21.12.17 22:22 </td>
+									    <td>0.10 btc</td>
+									    <td><a href="#">посмотреть</a></td>
+								  	</tr>
+								  	<tr>
+									    <td>21.12.17 22:22 </td>
+									    <td>0.10 btc</td>
+									    <td><a href="#">посмотреть</a></td>
+								  	</tr>
+								  	<tr>
+									    <td>21.12.17 22:22 </td>
+									    <td>0.10 btc</td>
+									    <td><a href="#">посмотреть</a></td>
+								  	</tr>
+								  	<tr>
+								  		<td colspan="3"><a href="" class="table__more">загрузить еще</a></td>
+								  	</tr>
+								</table>
+							</div>
+						<!-- hidden window -->
+						<div class="hidden-modal">
+							<div class="modal_content">
+								<i class="modal_icon"></i>
+								<ul>
+									<li><a href="#">1</a></li>
+									<li><a href="#">1</a></li>
+									<li class="modal_active">1<a href="#"></a></li>
+									<li><a href="#">1</a></li>
+									<li><a href="#">1</a></li>
+								</ul>
+								<p>Transaction id:</p>
+								<span>f820a8ddc48351c709addda90d18fc9b6116315874f1a466ba16c4f5c140db79</span>
+								<p>From it select numbers:</p>
+								<span>f<span class="modal_important">820</span>a<span class="modal_important">8</span>ddc<span class="modal_important">48351</span>c<span class="modal_important">709</span>addda<span class="modal_important">90</span>d<span class="modal_important">18</span>fc<span class="modal_important">9</span>b<span class="modal_important">6116315874</span>f<span class="modal_important">1</span>a<span class="modal_important">466</span>ba<span class="modal_important">16</span>c<span class="modal_important">4</span>f<span class="modal_important">5</span>c<span class="modal_important">140</span>db<span class="modal_important">79</span></span>
+								<p>Sum up:</p>
+								<span>820 + 8 + 48351 + 709 + 90 + 18 + 9 + 6116315874 + 1 + 466 + 16 + 4 + 5 + 140 + 79 =<span class="modal_important">6116366590</span></span>
+								<p>The resulting number is divided by 37 (to get the rest of the range 0 - 36):</p>
+								<p class="modal_more"><a href="#">More details about the algorithm</a></p>
+							</div>
+						</div>
+						<!-- end hidden window -->
+						</div>
+
+						</div>
+					</div>
+					<!-- end table -->
+				</div>
+				<!-- end wrap-content -->
+			</div>
+			<!-- begin footer -->
+			<footer class="wrap-footer">
+				<nav class="footer-list">
+					<ul>
+						<li><a href="#">faq</a></li>
+						<li><a href="#">гарантия</a></li>
+					</ul>
+				</nav>
+				<p class="copyright">© SixLuck Lottery, 2017</p>
+			</footer>
+			<!-- end footer -->
+		</div>
+	</div>
+
+<script src="js/jquery-1.7.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.easytabs/3.2.0/jquery.easytabs.min.js"></script>
+<script src="js/flipclock.js"></script>
+<script src="js/jscripts.js"></script>
+<script src="js/jquery.countdown.js"></script>
+<script src="js/scriptmini.js"></script>
+</body>
+</html>
